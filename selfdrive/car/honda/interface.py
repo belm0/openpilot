@@ -160,8 +160,8 @@ class CarInterface(CarInterfaceBase):
 
     elif candidate in (CAR.ACCORD, CAR.ACCORDH):
       stop_and_go = True
-      ret.mass = 3279. * CV.LB_TO_KG + STD_CARGO_KG
-      ret.wheelbase = 2.83
+      ret.mass = 2271. * CV.LB_TO_KG + STD_CARGO_KG
+      ret.wheelbase = 2.52
       ret.centerToFront = ret.wheelbase * 0.39
       ret.steerRatio = 16.33  # 11.82 is spec end-to-end
       ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0, 4096], [0, 4096]]  # TODO: determine if there is a dead zone at the top end

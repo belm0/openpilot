@@ -95,7 +95,7 @@ def get_can_signals(CP, gearbox_msg="GEARBOX"):
       ("EPB_STATE", "EPB_STATUS", 0),
     ]
     checks += [
-      ("EPB_STATUS", 50),
+      ("EPB_STATUS", 0),
       ("GAS_PEDAL_2", 100),
     ]
 

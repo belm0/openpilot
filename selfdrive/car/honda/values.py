@@ -50,7 +50,7 @@ VISUAL_HUD = {
 
 class CAR:
   ACCORD = "HONDA ACCORD 2018"
-  ACCORDH = "HONDA ACCORD HYBRID 2018"
+  ACCORDH = "HONDA N-BOX 2017"
   CIVIC = "HONDA CIVIC 2016"
   CIVIC_BOSCH = "HONDA CIVIC (BOSCH) 2019"
   CIVIC_BOSCH_DIESEL = "HONDA CIVIC SEDAN 1.6 DIESEL 2019"
@@ -74,9 +74,6 @@ class CAR:
 DIAG_MSGS = {1600: 5, 1601: 8}
 
 FINGERPRINTS = {
-  CAR.ACCORDH: [{
-    148: 8, 228: 5, 304: 8, 330: 8, 344: 8, 380: 8, 387: 8, 388: 8, 399: 7, 419: 8, 420: 8, 427: 3, 432: 7, 441: 5, 450: 8, 464: 8, 477: 8, 479: 8, 495: 8, 525: 8, 545: 6, 662: 4, 773: 7, 777: 8, 780: 8, 804: 8, 806: 8, 808: 8, 829: 5, 862: 8, 884: 8, 891: 8, 927: 8, 929: 8, 1302: 8, 1600: 5, 1601: 8, 1652: 8
-  }],
   CAR.ACURA_RDX: [{
     57: 3, 145: 8, 229: 4, 308: 5, 316: 8, 342: 6, 344: 8, 380: 8, 392: 6, 398: 3, 399: 6, 404: 4, 420: 8, 422: 8, 426: 8, 432: 7, 464: 8, 474: 5, 476: 4, 487: 4, 490: 8, 506: 8, 512: 6, 513: 6, 542: 7, 545: 4, 597: 8, 660: 8, 773: 7, 777: 8, 780: 8, 800: 8, 804: 8, 808: 8, 819: 7, 821: 5, 829: 5, 882: 2, 884: 7, 887: 8, 888: 8, 892: 8, 923: 2, 929: 4, 963: 8, 965: 8, 966: 8, 967: 8, 983: 8, 985: 3, 1024: 5, 1027: 5, 1029: 8, 1033: 5, 1034: 5, 1036: 8, 1039: 8, 1057: 5, 1064: 7, 1108: 8, 1365: 5, 1424: 5, 1729: 1
   }],
@@ -255,49 +252,26 @@ FW_VERSIONS = {
     ],
   },
   CAR.ACCORDH: {
-    (Ecu.gateway, 0x18daeff1, None): [
-      b'38897-TWA-A120\x00\x00',
-      b'38897-TWD-J020\x00\x00',
-    ],
     (Ecu.vsa, 0x18da28f1, None): [
-      b'57114-TWA-A040\x00\x00',
-      b'57114-TWA-A050\x00\x00',
-      b'57114-TWA-B520\x00\x00',
-    ],
-    (Ecu.srs, 0x18da53f1, None): [
-      b'77959-TWA-A440\x00\x00',
-      b'77959-TWA-L420\x00\x00',
-    ],
-    (Ecu.combinationMeter, 0x18da60f1, None): [
-      b'78109-TWA-A010\x00\x00',
-      b'78109-TWA-A020\x00\x00',
-      b'78109-TWA-A030\x00\x00',
-      b'78109-TWA-A110\x00\x00',
-      b'78109-TWA-A120\x00\x00',
-      b'78109-TWA-A210\x00\x00',
-      b'78109-TWA-A220\x00\x00',
-      b'78109-TWA-L010\x00\x00',
-    ],
-    (Ecu.shiftByWire, 0x18da0bf1, None): [
-      b'54008-TWA-A910\x00\x00',
-    ],
-    (Ecu.hud, 0x18da61f1, None): [
-      b'78209-TVA-A010\x00\x00',
-      b'78209-TVA-A110\x00\x00',
-    ],
-    (Ecu.fwdCamera, 0x18dab5f1, None): [
-      b'36161-TWA-A070\x00\x00',
-      b'36161-TWA-A330\x00\x00',
-    ],
-    (Ecu.fwdRadar, 0x18dab0f1, None): [
-      b'36802-TWA-A080\x00\x00',
-      b'36802-TWA-A070\x00\x00',
-      b'36802-TWA-A330\x00\x00',
+      b'57114-TTA-J050\x00\x00',
     ],
     (Ecu.eps, 0x18da30f1, None): [
-      b'39990-TVA-A160\x00\x00',
-      b'39990-TVA-A150\x00\x00',
-      b'39990-TVA-A340\x00\x00',
+      b'39990-TTA-J050\x00\x00',
+    ],
+    (Ecu.gateway, 0x18daeff1, None): [
+      b'38897-TTA-J010\x00\x00',
+    ],
+    (Ecu.fwdCamera, 0x18dab5f1, None): [
+      b'36161-TTA-J230\x00\x00',
+    ],
+    (Ecu.srs, 0x18da53f1, None): [
+      b'77959-TTA-J450\x00\x00',
+    ],
+    (Ecu.fwdRadar, 0x18dab0f1, None): [
+      b'36802-TTA-J120\x00\x00',
+    ],
+    (Ecu.combinationMeter, 0x18da60f1, None): [
+      b'78109-TTA-J110\x00\x00',
     ],
   },
   CAR.CIVIC: {
