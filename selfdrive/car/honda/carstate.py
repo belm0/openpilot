@@ -55,7 +55,7 @@ def get_can_signals(CP, gearbox_msg="GEARBOX"):
   checks = [
     ("ENGINE_DATA", 100),
     ("WHEEL_SPEEDS", 50),
-    ("STEERING_SENSORS", 100),
+    ("STEERING_SENSORS", 100),  # XX  ID 0x156
     ("SEATBELT_STATUS", 10),
     ("CRUISE", 10),
     ("POWERTRAIN_DATA", 100),
@@ -95,7 +95,7 @@ def get_can_signals(CP, gearbox_msg="GEARBOX"):
       ("EPB_STATE", "EPB_STATUS", 0),
     ]
     checks += [
-      ("EPB_STATUS", 0),
+      ("EPB_STATUS", 0),  # fix me
       ("GAS_PEDAL_2", 100),
     ]
 
@@ -205,8 +205,10 @@ class CarState(CarStateBase):
     super().__init__(CP)
     can_define = CANDefine(DBC[CP.carFingerprint]["pt"])
     self.gearbox_msg = "GEARBOX"
-    if CP.carFingerprint == CAR.ACCORD and CP.transmissionType == TransmissionType.cvt:
-      self.gearbox_msg = "GEARBOX_15T"
+    # TODO: need GEARBOX_15T
+    # TODO: nbox has CVT
+    #if CP.carFingerprint == CAR.ACCORD and CP.transmissionType == TransmissionType.cvt:
+    self.gearbox_msg = "GEARBOX_15T"
 
     self.shifter_values = can_define.dv[self.gearbox_msg]["GEAR_SHIFTER"]
     self.steer_status_values = defaultdict(lambda: "UNKNOWN", can_define.dv["STEER_STATUS"]["STEER_STATUS"])
